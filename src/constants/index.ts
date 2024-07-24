@@ -1,40 +1,4 @@
-import {
-	benefitIcon1,
-	benefitIcon2,
-	benefitIcon3,
-	benefitIcon4,
-	benefitImage2,
-	chromecast,
-	disc02,
-	discord,
-	discordBlack,
-	facebook,
-	figma,
-	file02,
-	framer,
-	homeSmile,
-	instagram,
-	notification2,
-	notification3,
-	notification4,
-	notion,
-	photoshop,
-	plusSquare,
-	protopie,
-	raindrop,
-	recording01,
-	recording03,
-	roadmap1,
-	roadmap2,
-	roadmap3,
-	roadmap4,
-	searchMd,
-	slack,
-	sliders04,
-	telegram,
-	twitter,
-	yourlogo,
-} from './images';
+
 
 export const navigation = [
 	{
@@ -106,41 +70,51 @@ export const brainwaveServicesIcons: string[] = [
 	'/assets/sliders-04.svg',
 ];
 
-// export const roadmap = [
-// 	{
-// 		id: '0',
-// 		title: 'Voice recognition',
-// 		text: 'Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.',
-// 		date: 'May 2023',
-// 		status: 'done',
-// 		imageUrl: roadmap1,
-// 		colorful: true,
-// 	},
-// 	{
-// 		id: '1',
-// 		title: 'Gamification',
-// 		text: 'Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.',
-// 		date: 'May 2023',
-// 		status: 'progress',
-// 		imageUrl: roadmap2,
-// 	},
-// 	{
-// 		id: '2',
-// 		title: 'Chatbot customization',
-// 		text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-// 		date: 'May 2023',
-// 		status: 'done',
-// 		imageUrl: roadmap3,
-// 	},
-// 	{
-// 		id: '3',
-// 		title: 'Integration with APIs',
-// 		text: 'Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.',
-// 		date: 'May 2023',
-// 		status: 'progress',
-// 		imageUrl: roadmap4,
-// 	},
-// ];
+type roadmapType = {
+	id: string;
+	title: string;
+	text: string;
+	date: string;
+	status: string;
+	imageUrl: string;
+	colorful?: true;
+};
+
+export const roadmap: roadmapType[] = [
+	{
+		id: '0',
+		title: 'Voice recognition',
+		text: 'Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.',
+		date: 'May 2023',
+		status: 'done',
+		imageUrl: '/assets/roadmap/image-1.png',
+		colorful: true,
+	},
+	{
+		id: '1',
+		title: 'Gamification',
+		text: 'Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.',
+		date: 'May 2023',
+		status: 'progress',
+		imageUrl: '/assets/roadmap/image-2.png',
+	},
+	{
+		id: '2',
+		title: 'Chatbot customization',
+		text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
+		date: 'May 2023',
+		status: 'done',
+		imageUrl: '/assets/roadmap/image-3.png',
+	},
+	{
+		id: '3',
+		title: 'Integration with APIs',
+		text: 'Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.',
+		date: 'May 2023',
+		status: 'progress',
+		imageUrl: '/assets/roadmap/image-4.png',
+	},
+];
 
 export const collabText: string =
 	"With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
@@ -148,10 +122,10 @@ export const collabText: string =
 type collabContentType = {
 	id: string;
 	title: string;
-	text: string;
+	text?: string;
 };
 
-export const collabContent = [
+export const collabContent:collabContentType[] = [
 	{
 		id: '0',
 		title: 'Seamless Integration',
@@ -175,7 +149,7 @@ type collabAppsType = {
 	height: number;
 };
 
-export const collabApps = [
+export const collabApps: collabAppsType[] = [
 	{
 		id: '0',
 		title: 'Figma',
@@ -234,41 +208,49 @@ export const collabApps = [
 	},
 ];
 
-// export const pricing = [
-// 	{
-// 		id: '0',
-// 		title: 'Basic',
-// 		description: 'AI chatbot, personalized recommendations',
-// 		price: '0',
-// 		features: [
-// 			'An AI chatbot that can understand your queries',
-// 			'Personalized recommendations based on your preferences',
-// 			'Ability to explore the app and its features without any cost',
-// 		],
-// 	},
-// 	{
-// 		id: '1',
-// 		title: 'Premium',
-// 		description: 'Advanced AI chatbot, priority support, analytics dashboard',
-// 		price: '9.99',
-// 		features: [
-// 			'An advanced AI chatbot that can understand complex queries',
-// 			'An analytics dashboard to track your conversations',
-// 			'Priority support to solve issues quickly',
-// 		],
-// 	},
-// 	{
-// 		id: '2',
-// 		title: 'Enterprise',
-// 		description: 'Custom AI chatbot, advanced analytics, dedicated account',
-// 		price: null,
-// 		features: [
-// 			'An AI chatbot that can understand your queries',
-// 			'Personalized recommendations based on your preferences',
-// 			'Ability to explore the app and its features without any cost',
-// 		],
-// 	},
-// ];
+type pricingType = {
+	id: string;
+	title: string;
+	description: string;
+	price: string | null;
+	features: string[];
+};
+
+export const pricing: pricingType[] = [
+	{
+		id: '0',
+		title: 'Basic',
+		description: 'AI chatbot, personalized recommendations',
+		price: '0',
+		features: [
+			'An AI chatbot that can understand your queries',
+			'Personalized recommendations based on your preferences',
+			'Ability to explore the app and its features without any cost',
+		],
+	},
+	{
+		id: '1',
+		title: 'Premium',
+		description: 'Advanced AI chatbot, priority support, analytics dashboard',
+		price: '9.99',
+		features: [
+			'An advanced AI chatbot that can understand complex queries',
+			'An analytics dashboard to track your conversations',
+			'Priority support to solve issues quickly',
+		],
+	},
+	{
+		id: '2',
+		title: 'Enterprise',
+		description: 'Custom AI chatbot, advanced analytics, dedicated account',
+		price: null,
+		features: [
+			'An AI chatbot that can understand your queries',
+			'Personalized recommendations based on your preferences',
+			'Ability to explore the app and its features without any cost',
+		],
+	},
+];
 
 type benefistType = {
 	id: string;
@@ -333,35 +315,42 @@ export const benefits: benefistType[] = [
 	},
 ];
 
-// export const socials = [
-// 	{
-// 		id: '0',
-// 		title: 'Discord',
-// 		iconUrl: discordBlack,
-// 		url: '#',
-// 	},
-// 	{
-// 		id: '1',
-// 		title: 'Twitter',
-// 		iconUrl: twitter,
-// 		url: '#',
-// 	},
-// 	{
-// 		id: '2',
-// 		title: 'Instagram',
-// 		iconUrl: instagram,
-// 		url: '#',
-// 	},
-// 	{
-// 		id: '3',
-// 		title: 'Telegram',
-// 		iconUrl: telegram,
-// 		url: '#',
-// 	},
-// 	{
-// 		id: '4',
-// 		title: 'Facebook',
-// 		iconUrl: facebook,
-// 		url: '#',
-// 	},
-// ];
+type socialsType = {
+	id: string;
+	title: string;
+	iconUrl: string;
+	url: string;
+};
+
+export const socials: socialsType[] = [
+	{
+		id: '0',
+		title: 'Discord',
+		iconUrl: '/assets/socials/discord.svg',
+		url: '#',
+	},
+	{
+		id: '1',
+		title: 'Twitter',
+		iconUrl: '/assets/socials/twitter.svg',
+		url: '#',
+	},
+	{
+		id: '2',
+		title: 'Instagram',
+		iconUrl: '/assets/socials/instagram.svg',
+		url: '#',
+	},
+	{
+		id: '3',
+		title: 'Telegram',
+		iconUrl: '/assets/socials/telegram.svg',
+		url: '#',
+	},
+	{
+		id: '4',
+		title: 'Facebook',
+		iconUrl: '/assets/socials/facebook.svg',
+		url: '#',
+	},
+];

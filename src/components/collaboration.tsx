@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import Image from 'next/image';
 import { LeftCurve, RightCurve } from './design/Collaboration';
 
-const Collaboration = () => {
+export const Collaboration = () => {
 	return (
 		<Section id="collaboration" crosses>
 			<div className="container lg:flex">
@@ -87,5 +87,3 @@ const Collaboration = () => {
 		</Section>
 	);
 };
-
-export default Collaboration;

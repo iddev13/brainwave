@@ -1,7 +1,9 @@
-import { Benefits } from '@/components/benefits';
-import Collaboration from '@/components/collaboration';
 import { Intro } from '@/components/intro';
-import Services from '@/components/services';
+import { Benefits } from '@/components/benefits';
+import { Collaboration } from '@/components/collaboration';
+import { Pricing } from '@/components/pricing';
+import { Services } from '@/components/services';
+import { Roadmap } from '@/components/roadmap';
 
 export default function Home() {
 	return (
@@ -10,6 +12,8 @@ export default function Home() {
 			<Benefits />
 			<Collaboration />
 			<Services />
+			<Pricing />
+			<Roadmap />
 		</div>
 	);
 }

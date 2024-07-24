@@ -1,11 +1,16 @@
 import Image from 'next/image';
-import { Heading } from './heading';
-import Section from './section';
+import { Heading } from '@/components/heading';
+import Section from '@/components/section';
 import { brainwaveServices, brainwaveServicesIcons } from '@/constants';
-import { Generating } from './generating';
-import { Gradient, PhotoChatMessage, VideoBar, VideoChatMessage } from './design/Services';
+import { Generating } from '@/components/generating';
+import {
+	Gradient,
+	PhotoChatMessage,
+	VideoBar,
+	VideoChatMessage,
+} from './design/Services';
 
-const Services = () => {
+export const Services = () => {
 	return (
 		<Section id="how-to-use">
 			<div className="container">
@@ -128,5 +133,3 @@ const Services = () => {
 		</Section>
 	);
 };
-
-export default Services;
